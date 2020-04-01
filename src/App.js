@@ -1,10 +1,12 @@
 import React from 'react'
-import { Router } from 'reach-router'
+import { Router } from '@reach/router'
 import About from './pages/About'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
 import Portfolio from './pages/Portfolio'
+import ResponsiveNavigation from './components/Responsive'
+import logo from './logo.svg'
 import './App.css'
 
 function App() {
@@ -18,6 +20,14 @@ function App() {
 
   return (
     <div className='App'>
+      <ResponsiveNavigation
+        navLinks={navLinks}
+        logo={logo}
+        // linkColor='white'
+        // background='#fff'
+        // hoverBackground='#ddd'
+        // linkColor='#333'
+      />
       <Router>
         <Contact path='/contact' />
         <Home path='/home' />
